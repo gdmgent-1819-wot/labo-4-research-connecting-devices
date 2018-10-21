@@ -55,17 +55,12 @@ def main():
 
         new_head = [snake[0][0], snake[0][1]]
 
-        
-        #if key == curses.KEY_DOWN:
         if wm.state['buttons'] == 256:
             new_head[0] += 1
-        #if key == curses.KEY_UP:
         if wm.state['buttons'] == 512:
             new_head[0] -= 1
-        #if key == curses.KEY_LEFT:
         if wm.state['buttons'] == 2048:
             new_head[1] -= 1
-        #if key == curses.KEY_RIGHT:
         if wm.state['buttons'] == 1024:
             new_head[1] += 1
 
