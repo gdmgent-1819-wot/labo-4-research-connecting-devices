@@ -1,4 +1,5 @@
 # Connecting Devices RBP 3
+## Get ready
 always update your pi first
 ```
 sudo apt-get update
