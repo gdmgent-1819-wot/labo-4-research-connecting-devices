@@ -4,16 +4,21 @@ from pygame.locals import *
 from random import randint
 from time import sleep
 import cwiid
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
 
-
+#firebase init
+cred = credentials.Certificate("firebase/snakepy-ab74f-firebase-adminsdk-ca44l-37e6d3a8c8.json")
+firebase = firebase_admin.initialize_app(cred,{'databaseURL':'https://snakepy-ab74f.firebaseio.com'})
 
 class Snake():
-        print 'Press button 1 + 2 on you Wii Remote ...'
-        time.sleep(1)
-        wm = cwiid.Wiimote()
-        time.sleep(1)
-        Rumble = False
-        wm.rpt_mode = cwiid.RPT_BTN
+    print 'Press button 1 + 2 on you Wii Remote ...'
+    time.sleep(1)
+    wm = cwiid.Wiimote()
+    time.sleep(1)
+    Rumble = False
+    wm.rpt_mode = cwiid.RPT_BTN
         
 	UP = [0, -1]
 	DOWN = [0, 1]
@@ -49,24 +54,24 @@ class Snake():
 	def startGame(self):
 		pygame.time.set_timer(USEREVENT + 1, 500)
 		while self.playing:
-                        if self.wm.state['buttons'] == 1024:
-                            self.direction = self.RIGHT
-                        if self.wm.state['buttons'] == 512:
-                            self.direction = self.UP
-                        if self.wm.state['buttons'] == 2048:
-                            self.direction = self.LEFT
-                        if self.wm.state['buttons'] == 256:
-                            self.direction = self.DOWN
+            if self.wm.state['buttons'] == 1024:
+                self.direction = self.RIGHT
+            if self.wm.state['buttons'] == 512:
+                self.direction = self.UP
+            if self.wm.state['buttons'] == 2048:
+                self.direction = self.LEFT
+            if self.wm.state['buttons'] == 256:
+                self.direction = self.DOWN
                         
-			for event in pygame.event.get():
-				if event.type == USEREVENT + 1:
-					self.move()
-				if event.type == KEYDOWN:
-					self.changeDirection(event)
+		for event in pygame.event.get():
+			if event.type == USEREVENT + 1:
+				self.move()
+			if event.type == KEYDOWN:
+				self.changeDirection(event)
 
-					# Exit
-					if event.key == pygame.K_RETURN:
-						self.playing = False
+			# Exit
+			if event.key == pygame.K_RETURN:
+				self.playing = False
 		self.quitGame()
 
 	def quitGame(self):
@@ -84,6 +89,13 @@ class Snake():
 		self.sense.set_pixel(self.apple[0], self.apple[1], self.COLOR_OFF)
 
 		sleep(2)
+
+		name = input("Highscore name?")
+		users_ref.child('scores').set({
+			'name': name,
+			'score': self.score
+		})
+		print('your highscore has been saved to the database (:')
 
 		msg = "SCORE: {}".format(self.score)
 		self.sense.show_message(msg)
