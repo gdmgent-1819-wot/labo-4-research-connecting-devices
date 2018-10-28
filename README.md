@@ -8,7 +8,7 @@ sudo apt-get upgrade -y
 
 
 ## WII remote
-### Install modules
+### Install modules RBP
 ```
 sudo apt-get install python-cwiid
 sudo apt-get install wminput
@@ -28,3 +28,4 @@ don't forget to download the node modules when cloning this project:
 ```
 npm install
 ```
+Highscores can be viewed at: http://localhost:4200/highscores
