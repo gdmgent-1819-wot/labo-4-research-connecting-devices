@@ -30,6 +30,6 @@ npm install
 ```
 Highscores can be viewed at: http://localhost:4200/highscores
 #### modules uses
-firebase: https://github.com/firebase/emberfire
-sass: https://www.npmjs.com/package/ember-cli-sass
-font-awesome: https://github.com/martndemus/ember-font-awesome
+firebase: https://github.com/firebase/emberfire  
+sass: https://www.npmjs.com/package/ember-cli-sass  
+font-awesome: https://github.com/martndemus/ember-font-awesome  
