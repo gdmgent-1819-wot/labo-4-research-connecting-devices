@@ -14,8 +14,8 @@ sudo apt-get install python-cwiid
 sudo apt-get install wminput
 ```
 
-Extra intresting links:
-https://www.raspberrypi-spy.co.uk/2013/02/nintendo-wii-remote-python-and-the-raspberry-pi/
+Extra intresting links: 
+https://www.raspberrypi-spy.co.uk/2013/02/nintendo-wii-remote-python-and-the-raspberry-pi/ <br/>
 https://pimylifeup.com/raspberry-pi-wiimote-controllers/
 
 ### ember client
@@ -30,6 +30,6 @@ npm install
 ```
 Highscores can be viewed at: http://localhost:4200/highscores
 #### modules uses
-firebase: https://github.com/firebase/emberfire  
-sass: https://www.npmjs.com/package/ember-cli-sass  
+firebase: https://github.com/firebase/emberfire  <br/>
+sass: https://www.npmjs.com/package/ember-cli-sass  <br/>
 font-awesome: https://github.com/martndemus/ember-font-awesome  
