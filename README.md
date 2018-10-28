@@ -14,7 +14,7 @@ sudo apt-get install python-cwiid
 sudo apt-get install wminput
 ```
 
-Extra intresting links: 
+Extra intresting links: <br/>
 https://www.raspberrypi-spy.co.uk/2013/02/nintendo-wii-remote-python-and-the-raspberry-pi/ <br/>
 https://pimylifeup.com/raspberry-pi-wiimote-controllers/
 
