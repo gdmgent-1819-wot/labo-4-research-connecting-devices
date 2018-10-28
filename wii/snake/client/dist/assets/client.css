@@ -1,0 +1,73 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #f5f6fa;
+}
+
+.head {
+  height: 40px;
+  background-image: linear-gradient(to bottom, #22d0b2, #1fbfa3);
+}
+.head img {
+  height: 20px;
+  padding: 10px;
+  float: left;
+}
+
+p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  padding: 9px 10px;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 640px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+input {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  width: 100%;
+  background: #fff;
+  color: #a3a3a3;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+  font-size: 16px;
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+th {
+  height: 40px;
+  background-image: linear-gradient(to bottom, #22d0b2, #1fbfa3);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+td {
+  box-sizing: border-box;
+  padding: 20px;
+  background-color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+td i {
+  margin-right: 30px;
+}
+
+/*# sourceMappingURL=client.css.map */

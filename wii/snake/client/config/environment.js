@@ -1,7 +1,15 @@
 'use strict';
 
-module.exports = function(environment) {
+module.exports = function (environment) {
   let ENV = {
+    firebase: {
+      apiKey: "AIzaSyD4GQgBiSbbE_5rBJIEK4WjMUZH_g_p2HM",
+      authDomain: "snakepy-ab74f.firebaseapp.com",
+      databaseURL: "https://snakepy-ab74f.firebaseio.com",
+      projectId: "snakepy-ab74f",
+      storageBucket: "snakepy-ab74f.appspot.com",
+      messagingSenderId: "649724216801"
+    },
     modulePrefix: 'client',
     environment,
     rootURL: '/',
