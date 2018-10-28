@@ -24,7 +24,7 @@ https://www.emberjs.com
 ```
 npm install -g ember-cli
 ```
-don't forget to download the node modules when cloning this project:
+Don't forget to download the node modules when cloning this project:
 ```
 npm install
 ```
